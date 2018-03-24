@@ -1,7 +1,7 @@
 <import src="../../components/wetoast/wetoast.wxml" />
 <view class="container">
   <view class="banner">
-  	<view class="beginBtn"></view>
+  	<view class="beginBtn" bindtap="go"></view>
   	<view class="fixGzh"></view>
   </view>
   <view class="home_tips">转发到不同群，挑战机会增加</view>

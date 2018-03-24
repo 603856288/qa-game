@@ -15,6 +15,11 @@ Page({
       tabIndex:index
     })
   },
+  go:function(){
+    wx.navigateTo({
+      url: '/pages/ready/ready'
+    })
+  },
   onShareAppMessage: function () {
     return {
       title: '众安手机保险 爱机无忧',

@@ -5,7 +5,24 @@ Page({
     resultShow:false
   },
   onLoad() {
-    
+    wx.showLoading();
+    wx.request({
+      url: host + '/api/challenge', // 目标服务器 url
+      dataType: 'json',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: (res) => {
+        
+      },
+      fail: (res) => {
+
+      },
+      complete: (res) => {
+        wx.hideLoading();
+      }
+    });
   },
   hideResult:function(){
     

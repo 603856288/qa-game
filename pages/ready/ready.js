@@ -7,8 +7,8 @@ Page({
   onLoad() {
     
   },
-  hideResult:function(){
-    
+  onShow:function(){
+
   },
   onShareAppMessage: function () {
     return {

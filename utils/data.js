@@ -1,5 +1,5 @@
 //var host = 'https://t-minapp-digital.zhongan.com';
-var host = 'https://u-minapp-digital.zhongan.com';
+var host = 'https://www.peinilol.com';
 //var host = 'https://minapp-digital.zhongan.com';
 //var host = 'http://192.168.35.73:8080'
 
