@@ -1,0 +1,64 @@
+<import src="../../components/wetoast/wetoast.wxml" />
+<view class="container">
+  <view class="banner">
+  	<view class="beginBtn"></view>
+  	<view class="fixGzh"></view>
+  </view>
+  <view class="home_tips">转发到不同群，挑战机会增加</view>
+  <view class="content">
+  	<view class="navBar">
+  		<view bindtap="tabChange" data-index="0" class="nav nav01 {{tabIndex==0?'active':''}}"></view>
+  		<view bindtap="tabChange" data-index="1" class="nav nav02 {{tabIndex==1?'active':''}}"></view>
+  		<view bindtap="tabChange" data-index="2" class="nav nav03 last {{tabIndex==2?'active':''}}"></view>
+  	</view>
+  	<view class="part01" wx:if="{{tabIndex==0}}">
+  		<view class="pt">通关排行榜</view>
+  		<view class="listMenu">
+  			<view class="listItem">
+  				<view class="num numOne">1</view>
+  				<image class="face" src="../../images/face.png" mode="aspectFit" />
+  				<text class="name">玩家名字这个摩擦的</text>
+  				<view class="itemDetail">
+  					<view>获得皮肤<text class="fontType01">124</text>个</view>
+  					<view><text class="fontType02">价值123213元</text></view>
+  				</view>
+  			</view>
+  			<view class="listItem">
+  				<view class="num numTwo">2</view>
+  				<image class="face" src="../../images/face.png" mode="aspectFit" />
+  				<text class="name">玩家名字这个摩擦的</text>
+  				<view class="itemDetail">
+  					<view>获得皮肤<text class="fontType01">124</text>个</view>
+  					<view><text class="fontType02">价值123213元</text></view>
+  				</view>
+  			</view>
+  			<view class="listItem">
+  				<view class="num numThree">3</view>
+  				<image class="face" src="../../images/face.png" mode="aspectFit" />
+  				<text class="name">玩家名字这个摩擦的</text>
+  				<view class="itemDetail">
+  					<view>获得皮肤<text class="fontType01">124</text>个</view>
+  					<view><text class="fontType02">价值123213元</text></view>
+  				</view>
+  			</view>
+  			<view class="listItem last">
+  				<view class="num">4</view>
+  				<image class="face" src="../../images/face.png" mode="aspectFit" />
+  				<text class="name">玩家名字这个摩擦的</text>
+  				<view class="itemDetail">
+  					<view>获得皮肤<text class="fontType01">124</text>个</view>
+  					<view><text class="fontType02">价值123213元</text></view>
+  				</view>
+  			</view>
+  		</view>
+  	</view>
+  	<view class="part02" wx:if="{{tabIndex==1}}">
+  		<view><image class="logo" src="../../images/logo.png" mode="aspectFit" /></view>
+		<view class="info">转发到微信群即可查看群内智力排行了~</view>
+		<button class="btnShare">分享到微信群</button>
+  	</view>
+  	<view class="part03"></view>
+  </view>
+</view>
+<!-- wetoast -->
+<template is="wetoast" data="{{...__wetoast__}}" />

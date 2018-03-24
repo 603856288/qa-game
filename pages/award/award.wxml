@@ -1,0 +1,33 @@
+<import src="../../components/wetoast/wetoast.wxml" />
+<view class="container">
+  <view class="award">  
+    <view class="guide"></view>
+    <view class="head">
+      <image class="headImg" src="../../images/logo.png" mode="aspectFit" />
+    </view>
+    <view class="nickName">玩家昵称这么长的我</view>
+    <view class="p1">共获得皮肤<text>11</text>个</view>
+    <view class="content">
+      <view class="t1">
+        <view><text class="num">0</text>次</view>
+        <view>挑战机会</view>
+        <view>0次明天可用</view>
+      </view>
+      <view class="t2">
+        <view><text class="num">3</text>次</view>
+        <view>已挑战</view>
+      </view>
+      <view class="t3">
+        <view><text class="num">1</text>次</view>
+        <view>邀请码</view>
+      </view>
+    </view>
+    <view class="bottom_btn">
+      <button class="btnL">炫耀战绩</button>
+      <button class="btnR">获得挑战机会</button>
+    </view>
+  </view>  
+  <view class="moreChange">更多智力挑战</view>
+</view>
+<!-- wetoast -->
+<template is="wetoast" data="{{...__wetoast__}}" />

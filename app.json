@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/fail/fail",
+    "pages/information/information",
+    "pages/index/index",
+    "pages/moreChance/moreChance",
+    "pages/qa/qa",
+    "pages/award/award",
+    "pages/ready/ready",
+    "pages/success/success"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

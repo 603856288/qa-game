@@ -1,0 +1,23 @@
+<import src="../../components/wetoast/wetoast.wxml" />
+<view class="container">
+  <view class="information">
+    <view class="infoInner">
+      <view class="re_h">填写个人信息<!-- <text class="close"></text> --></view>
+      <view class="re_input first">
+        <text class="key">联系人：</text>
+        <input placeholder="" />
+      </view>
+      <view class="re_input">
+        <text class="key">手机号码：</text>
+        <input placeholder="" />
+      </view>
+      <view class="re_input">
+        <text class="key">QQ号码：</text>
+        <input placeholder="" />
+      </view>
+      <button class="btnSave">保存</button>
+    </view>  
+  </view>
+</view>
+<!-- wetoast -->
+<template is="wetoast" data="{{...__wetoast__}}" />

@@ -1,0 +1,16 @@
+<import src="../../components/wetoast/wetoast.wxml" />
+<view class="container">
+  <view class="ready">  
+    <view class="head">
+      <image class="headImg" src="../../images/logo.png" mode="aspectFit" />
+    </view>
+    <view class="nickName">玩家昵称这么长的我</view>
+    <view class="pReady">挑战即将开始</view>
+    <view>
+      <image class="iconGo" src="../../images/0.png" mode="aspectFit" />
+    </view>
+    <view class="p1">导入奇葩题目中...</view>
+  </view>  
+</view>
+<!-- wetoast -->
+<template is="wetoast" data="{{...__wetoast__}}" />
