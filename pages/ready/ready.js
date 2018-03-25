@@ -2,17 +2,31 @@ const host = require('../../utils/data.js').host;
 const app = getApp();
 Page({
   data: {
-    resultShow:true
+    imgList:['https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/3.png','https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/2.png','https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/1.png','https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/0.png'],
+    imgSrc:'https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/3.png',
+    time:0,
+    avatarUrl:wx.getStorageSync('avatarUrl'),
+    nickName:wx.getStorageSync('nickName')
   },
   onLoad() {
-    
-  },
-  onShow:function(){
-
+    var self = this;
+    var timer = setInterval(function(){
+      if(self.data.time<3){
+        self.data.time++;
+        self.setData({
+          imgSrc:self.data.imgList[self.data.time]
+        })
+      }else{
+        wx.redirectTo({
+          url: '/pages/qa/qa'
+        })
+        clearInterval(timer);
+      }
+    },1000);
   },
   onShareAppMessage: function () {
     return {
-      title: '众安手机保险 爱机无忧',
+      title: '小信老师',
       path: '/pages/index/index'
     }
   }

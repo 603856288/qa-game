@@ -9,6 +9,11 @@ App({
   },
   getLogin:function(){
     var self = this;
+    wx.showToast({
+      title: '成功',
+      icon: 'success',
+      duration: 2000
+    })
     wx.login({
       success: function(res) {
         //console.log(res)
@@ -24,9 +29,15 @@ App({
             data: param,
             header: { "content-type": 'application/x-www-form-urlencoded' },
             success: (res => {
+              wx.setStorageSync('token',res.data.data.token.access_token);
+              wx.setStorageSync('openId',res.data.data.user.openId);
               wx.getUserInfo({
                 success: function(res) {
-                  console.log(res)
+                  var rawData = res.rawData;
+                  rawData = JSON.parse(rawData);
+                  wx.setStorageSync('nickName',rawData.nickName);
+                  wx.setStorageSync('avatarUrl',rawData.avatarUrl);
+                  wx.setStorageSync('gender',rawData.gender);
                   /*var encryptedData = res.encryptedData;
                   var iv = res.iv;
                   var thirdSession = wx.getStorageSync('thirdSession');

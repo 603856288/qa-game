@@ -16,7 +16,7 @@ Page({
     })
   },
   go:function(){
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/ready/ready'
     })
   },

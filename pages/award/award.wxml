@@ -3,9 +3,9 @@
   <view class="award">  
     <view class="guide"></view>
     <view class="head">
-      <image class="headImg" src="../../images/logo.png" mode="aspectFit" />
+      <image class="headImg" src="{{avatarUrl}}" mode="aspectFit" />
     </view>
-    <view class="nickName">玩家昵称这么长的我</view>
+    <view class="nickName">{{nickName}}</view>
     <view class="p1">共获得皮肤<text>11</text>个</view>
     <view class="content">
       <view class="t1">

@@ -2,10 +2,16 @@ const host = require('../../utils/data.js').host;
 const app = getApp();
 Page({
   data: {
-    resultShow:true
+    avatarUrl:wx.getStorageSync('avatarUrl'),
+    nickName:wx.getStorageSync('nickName'),
+    resultShow:true,
+    qaIndex:""
   },
-  onLoad() {
-    
+  onLoad(e) {
+    var qaIndex = e.qaIndex;
+    this.setData({
+      qaIndex:qaIndex
+    })
   },
   hideResult:function(){
     

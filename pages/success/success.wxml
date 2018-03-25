@@ -2,9 +2,9 @@
 <view class="container">
   <view class="success">  
     <view class="head">
-      <image class="headImg" src="../../images/logo.png" mode="aspectFit" />
+      <image class="headImg" src="{{avatarUrl}}" mode="aspectFit" />
     </view>
-    <view class="nickName">玩家昵称这么长的我</view>
+    <view class="nickName">{{nickName}}</view>
     <view>
       <image class="iconSuc" src="../../images/win.png" mode="aspectFit" />
     </view>
@@ -12,8 +12,8 @@
     <view class="p2">可在“我的奖品”中查看</view>
     <button class="btn_re">炫耀一下</button>
     <button class="btn_re">填写个人信息</button>
-    <button class="btn_re bg_426098">继续挑战</button>
-    <view class="p3">请输入正确的个人信息</view>
+    <button bindtap="moreChance" class="btn_re bg_426098">继续挑战</button>
+    <view bindtap="myInfo" class="p3">请输入正确的个人信息</view>
     <view class="p4">工作人员会在3个工作日内与你联系</view>
   </view>  
 </view>
