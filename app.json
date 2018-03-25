@@ -1,13 +1,13 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/information/information",
+    "pages/success/success",
     "pages/qa/qa",
     "pages/fail/fail",
-    "pages/information/information",
     "pages/moreChance/moreChance",
     "pages/award/award",
-    "pages/ready/ready",
-    "pages/success/success"
+    "pages/ready/ready"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -140,7 +140,7 @@ Page({
       if(qaIndex>3){
         self.submitChallenge(false);
         wx.redirectTo({
-          url:"/pages/fail/fail?qaIndex" + qaIndex
+          url:"/pages/fail/fail?qaIndex=" + qaIndex
         })
       }  
     }
@@ -192,7 +192,7 @@ Page({
     var self = this;
     var qaIndex = self.data.qaIndex;
     return {
-      title: '众安手机保险 爱机无忧',
+      title: '小信老师',
       path: '/pages/index/index',
       success:function(e){
         console.log(e)

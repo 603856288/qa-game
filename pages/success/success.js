@@ -21,7 +21,7 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: '众安手机保险 爱机无忧',
+      title: '小信老师',
       path: '/pages/index/index'
     }
   }

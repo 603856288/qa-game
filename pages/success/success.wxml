@@ -10,10 +10,10 @@
     </view>
     <view class="p1">您已成功获得一个皮肤领取资格</view>
     <view class="p2">可在“我的奖品”中查看</view>
-    <button class="btn_re">炫耀一下</button>
-    <button class="btn_re">填写个人信息</button>
+    <button class="btn_re" open-type="share">炫耀一下</button>
+    <button bindtap="myInfo" class="btn_re">填写个人信息</button>
     <button bindtap="moreChance" class="btn_re bg_426098">继续挑战</button>
-    <view bindtap="myInfo" class="p3">请输入正确的个人信息</view>
+    <view class="p3">请输入正确的个人信息</view>
     <view class="p4">工作人员会在3个工作日内与你联系</view>
   </view>  
 </view>

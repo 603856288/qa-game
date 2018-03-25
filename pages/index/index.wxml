@@ -14,48 +14,59 @@
   	<view class="part01" wx:if="{{tabIndex==0}}">
   		<view class="pt">通关排行榜</view>
   		<view class="listMenu">
-  			<view class="listItem">
-  				<view class="num numOne">1</view>
-  				<image class="face" src="../../images/face.png" mode="aspectFit" />
-  				<text class="name">玩家名字这个摩擦的</text>
-  				<view class="itemDetail">
-  					<view>获得皮肤<text class="fontType01">124</text>个</view>
-  					<view><text class="fontType02">价值123213元</text></view>
-  				</view>
-  			</view>
-  			<view class="listItem">
-  				<view class="num numTwo">2</view>
-  				<image class="face" src="../../images/face.png" mode="aspectFit" />
-  				<text class="name">玩家名字这个摩擦的</text>
-  				<view class="itemDetail">
-  					<view>获得皮肤<text class="fontType01">124</text>个</view>
-  					<view><text class="fontType02">价值123213元</text></view>
-  				</view>
-  			</view>
-  			<view class="listItem">
-  				<view class="num numThree">3</view>
-  				<image class="face" src="../../images/face.png" mode="aspectFit" />
-  				<text class="name">玩家名字这个摩擦的</text>
-  				<view class="itemDetail">
-  					<view>获得皮肤<text class="fontType01">124</text>个</view>
-  					<view><text class="fontType02">价值123213元</text></view>
-  				</view>
-  			</view>
-  			<view class="listItem last">
-  				<view class="num">4</view>
-  				<image class="face" src="../../images/face.png" mode="aspectFit" />
-  				<text class="name">玩家名字这个摩擦的</text>
-  				<view class="itemDetail">
-  					<view>获得皮肤<text class="fontType01">124</text>个</view>
-  					<view><text class="fontType02">价值123213元</text></view>
-  				</view>
-  			</view>
+        <block wx:for="{{menuList}}">
+          <view class="listItem">
+            <view class="num numOne">{{index+1}}</view>
+            <image class="face" src="../../images/face.png" mode="aspectFit" />
+            <text class="name">{{item.name}}</text>
+            <view class="itemDetail">
+              <view>获得皮肤<text class="fontType01">{{item.totalGiftNum}}</text>个</view>
+              <view><text class="fontType02">价值{{item.totalGiftPrice}}元</text></view>
+            </view>
+          </view>
+        </block>
+  			<!-- <view class="listItem">
+          <view class="num numOne">1</view>
+          <image class="face" src="../../images/face.png" mode="aspectFit" />
+          <text class="name">玩家名字这个摩擦的</text>
+          <view class="itemDetail">
+            <view>获得皮肤<text class="fontType01">124</text>个</view>
+            <view><text class="fontType02">价值123213元</text></view>
+          </view>
+        </view>
+        <view class="listItem">
+          <view class="num numTwo">2</view>
+          <image class="face" src="../../images/face.png" mode="aspectFit" />
+          <text class="name">玩家名字这个摩擦的</text>
+          <view class="itemDetail">
+            <view>获得皮肤<text class="fontType01">124</text>个</view>
+            <view><text class="fontType02">价值123213元</text></view>
+          </view>
+        </view>
+        <view class="listItem">
+          <view class="num numThree">3</view>
+          <image class="face" src="../../images/face.png" mode="aspectFit" />
+          <text class="name">玩家名字这个摩擦的</text>
+          <view class="itemDetail">
+            <view>获得皮肤<text class="fontType01">124</text>个</view>
+            <view><text class="fontType02">价值123213元</text></view>
+          </view>
+        </view>
+        <view class="listItem last">
+          <view class="num">4</view>
+          <image class="face" src="../../images/face.png" mode="aspectFit" />
+          <text class="name">玩家名字这个摩擦的</text>
+          <view class="itemDetail">
+            <view>获得皮肤<text class="fontType01">124</text>个</view>
+            <view><text class="fontType02">价值123213元</text></view>
+          </view>
+        </view> -->
   		</view>
   	</view>
   	<view class="part02" wx:if="{{tabIndex==1}}">
   		<view><image class="logo" src="../../images/logo.png" mode="aspectFit" /></view>
 		<view class="info">转发到微信群即可查看群内智力排行了~</view>
-		<button class="btnShare">分享到微信群</button>
+		<button class="btnShare" open-type="share">分享到微信群</button>
   	</view>
   	<view class="part03"></view>
   </view>
