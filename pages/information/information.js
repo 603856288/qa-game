@@ -88,7 +88,9 @@ Page({
       'name':obj.name,
       'phone':obj.phone,
       'qq':obj.qq,
-      'wechat_id':obj.wechat_id
+      'wechat_id':obj.wechat_id,
+      'id':wx.getStorageSync('id'),
+      'openId':wx.getStorageSync('openId')
     }
     wx.request({
       url: host + '/api/updateUser', // 目标服务器 url

@@ -1,9 +1,9 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/qa/qa",
     "pages/information/information",
     "pages/success/success",
-    "pages/qa/qa",
     "pages/fail/fail",
     "pages/moreChance/moreChance",
     "pages/award/award",

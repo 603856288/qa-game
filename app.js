@@ -31,6 +31,7 @@ App({
             success: (res => {
               wx.setStorageSync('token',res.data.data.token.access_token);
               wx.setStorageSync('openId',res.data.data.user.openId);
+              wx.setStorageSync('id',res.data.data.user.id);
               wx.getUserInfo({
                 success: function(res) {
                   var rawData = res.rawData;
@@ -38,30 +39,25 @@ App({
                   wx.setStorageSync('nickName',rawData.nickName);
                   wx.setStorageSync('avatarUrl',rawData.avatarUrl);
                   wx.setStorageSync('gender',rawData.gender);
-                  /*var encryptedData = res.encryptedData;
-                  var iv = res.iv;
-                  var thirdSession = wx.getStorageSync('thirdSession');
                   var param = {
-                     'encryptedData': encryptedData,
-                     'iv':iv,
-                     'thirdSession':thirdSession
+                     'nickName': rawData.nickName,
+                     'avatarUrl':rawData.avatarUrl,
+                     'gender':rawData.gender,
+                     'id':wx.getStorageSync('id'),
+                     'openId':wx.getStorageSync('openId')
                   }
                   wx.request({
-                    url: host + "/common/decodeUserInfo",
+                    url: host + "/api/updateUser",
                     method: "POST",
                     data: param,
                     header: { "content-type": 'application/x-www-form-urlencoded' },
                     success: (res => {
-                      var res = res.data;
-                      self.globalData.isLogin = true;
-                      if(res.respCode=='000000'&&cb){
-                        cb();
-                      }
+                      
                     }),
                     fail: (error => {
-                      wx.hideLoading();
+
                     })
-                  }) */
+                  })
                 }
               })
             }),

@@ -58,16 +58,17 @@ Page({
         url:"/pages/success/success"
       })
       return false;
+    }else{
+      self.setData({
+        qaId:this.data.list[index].id,
+        question:this.data.list[index].title,
+        option1:this.data.list[index].option1,
+        option2:this.data.list[index].option2,
+        option3:this.data.list[index].option3,
+        option4:this.data.list[index].option4,
+        answer:this.data.list[index].answer
+      })
     }
-    self.setData({
-      qaId:this.data.list[index].id,
-      question:this.data.list[index].title,
-      option1:this.data.list[index].option1,
-      option2:this.data.list[index].option2,
-      option3:this.data.list[index].option3,
-      option4:this.data.list[index].option4,
-      answer:this.data.list[index].answer
-    })
     if(index<4){
       self.setData({
         time:12
@@ -97,7 +98,7 @@ Page({
         var answer = self.data.answer;
         var arr = self.data.chooseArr,obj={};
         obj.qId = self.data.qaId;
-        obj.result = self.data.result;
+        obj.result = false;
         arr.push(obj);
         console.log(arr)
 
@@ -119,8 +120,7 @@ Page({
       self.setData({
         result:true,
         myAnswerRight:answer,
-        showRight:true,
-        qaIndex:qaIndex
+        showRight:true
       })
       setTimeout(function(){
         self.setData({

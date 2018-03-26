@@ -15,8 +15,8 @@
   		<view class="pt">通关排行榜</view>
   		<view class="listMenu">
         <block wx:for="{{menuList}}">
-          <view class="listItem">
-            <view class="num numOne">{{index+1}}</view>
+          <view class="listItem {{index==(menuList.length-1)?'last':''}}">
+            <view class="num {{index==0?'numOne':index==1?'numTwo':index==2?'numThree':''}}">{{index+1}}</view>
             <image class="face" src="../../images/face.png" mode="aspectFit" />
             <text class="name">{{item.name}}</text>
             <view class="itemDetail">
@@ -25,42 +25,6 @@
             </view>
           </view>
         </block>
-  			<!-- <view class="listItem">
-          <view class="num numOne">1</view>
-          <image class="face" src="../../images/face.png" mode="aspectFit" />
-          <text class="name">玩家名字这个摩擦的</text>
-          <view class="itemDetail">
-            <view>获得皮肤<text class="fontType01">124</text>个</view>
-            <view><text class="fontType02">价值123213元</text></view>
-          </view>
-        </view>
-        <view class="listItem">
-          <view class="num numTwo">2</view>
-          <image class="face" src="../../images/face.png" mode="aspectFit" />
-          <text class="name">玩家名字这个摩擦的</text>
-          <view class="itemDetail">
-            <view>获得皮肤<text class="fontType01">124</text>个</view>
-            <view><text class="fontType02">价值123213元</text></view>
-          </view>
-        </view>
-        <view class="listItem">
-          <view class="num numThree">3</view>
-          <image class="face" src="../../images/face.png" mode="aspectFit" />
-          <text class="name">玩家名字这个摩擦的</text>
-          <view class="itemDetail">
-            <view>获得皮肤<text class="fontType01">124</text>个</view>
-            <view><text class="fontType02">价值123213元</text></view>
-          </view>
-        </view>
-        <view class="listItem last">
-          <view class="num">4</view>
-          <image class="face" src="../../images/face.png" mode="aspectFit" />
-          <text class="name">玩家名字这个摩擦的</text>
-          <view class="itemDetail">
-            <view>获得皮肤<text class="fontType01">124</text>个</view>
-            <view><text class="fontType02">价值123213元</text></view>
-          </view>
-        </view> -->
   		</view>
   	</view>
   	<view class="part02" wx:if="{{tabIndex==1}}">
