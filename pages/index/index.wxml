@@ -1,8 +1,8 @@
 <import src="../../components/wetoast/wetoast.wxml" />
 <view class="container">
   <view class="banner">
-  	<view class="beginBtn" bindtap="go"></view>
-  	<view class="fixGzh"></view>
+  	<view class="beginBtn" bindtap="continue"></view>
+  	<view class="fixGzh" bindtap="findGzh"></view>
   </view>
   <view class="home_tips">转发到不同群，挑战机会增加</view>
   <view class="content">
@@ -33,6 +33,12 @@
 		<button class="btnShare" open-type="share">分享到微信群</button>
   	</view>
   	<view class="part03"></view>
+  </view>
+  <view class="dialog_gzh"  wx:if="{{dialog_gzhShow}}">
+    <view class="mask" bindtap="hideDialog"></view>
+    <view class="gzhInner">
+      <view><image class="erweima" src="../../images/erweima.jpg" mode="aspectFit" /></view>
+    </view>  
   </view>
 </view>
 <!-- wetoast -->

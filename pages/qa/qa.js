@@ -25,13 +25,17 @@ Page({
       withShareTicket: true
     })
     wx.showLoading();
+    var param={
+      'openId':wx.getStorageSync('openId')
+    }
     wx.request({
       url: host + '/api/challenge', // 目标服务器 url
       dataType: 'json',
       method: 'POST',
+      data: param,
       header: {
         'content-type': 'application/x-www-form-urlencoded',
-        'token':''
+        'token':wx.getStorageSync('token')
       },
       success: (res) => {
         var res = res.data;

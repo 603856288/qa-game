@@ -11,16 +11,16 @@
       <view class="t1">
         <view><text class="num">0</text>次</view>
         <view>挑战机会</view>
-        <view>0次明天可用</view>
+        <!-- <view>0次明天可用</view> -->
       </view>
       <view class="t2">
         <view><text class="num">3</text>次</view>
         <view>已挑战</view>
       </view>
-      <view class="t3">
+      <!-- <view class="t3">
         <view><text class="num">1</text>次</view>
         <view>邀请码</view>
-      </view>
+      </view> -->
     </view>
     <view class="bottom_btn">
       <button class="btnL">炫耀战绩</button>
