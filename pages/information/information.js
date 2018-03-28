@@ -107,6 +107,11 @@ Page({
             title: "保存成功",
             duration: 1000
         })
+        setTimeout(function(){
+          wx.switchTab({
+            url: '/pages/index/index'
+          })
+        },1000)
       },
       fail: (res) => {
       

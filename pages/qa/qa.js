@@ -58,9 +58,6 @@ Page({
     var index = self.data.qaIndex;
     if(index>11){
       self.submitChallenge(true);
-      wx.redirectTo({
-        url:"/pages/success/success"
-      })
       return false;
     }else{
       self.setData({
@@ -115,6 +112,9 @@ Page({
     },1000);
 
   },
+  closeBtn:function(){
+    this.submitChallenge(false);
+  },
   chooseOne:function(e){
     var self = this;
     var index = e.currentTarget.dataset.index;
@@ -143,9 +143,6 @@ Page({
       })
       if(qaIndex>3){
         self.submitChallenge(false);
-        wx.redirectTo({
-          url:"/pages/fail/fail?qaIndex=" + qaIndex
-        })
       }  
     }
     var arr = self.data.chooseArr,obj={};
@@ -166,6 +163,7 @@ Page({
     self.showQA();
   },
   submitChallenge:function(tf){
+    var self = this;
     var param = {
       openId:wx.getStorageSync('openId'),
       result:tf,
@@ -179,10 +177,19 @@ Page({
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded',
-        'token':''
+        'token':wx.getStorageSync('token')
       },
       success: (res) => {
-
+        console.log(tf)
+        if(!tf){
+           wx.redirectTo({
+            url:"/pages/fail/fail?qaIndex=" + self.data.qaIndex
+          }) 
+        }else{
+          wx.redirectTo({
+            url:"/pages/success/success"
+          })
+        }
       },
       fail: (res) => {
 
@@ -199,16 +206,29 @@ Page({
       title: '小信老师',
       path: '/pages/index/index',
       success:function(e){
-        console.log(e)
-        self.setData({
-          resultShow:false,
-          showRight:false,
-          myAnswerRight:0,
-          myAnswerError:0
-        })
-        self.addOne();
+        if(e.shareTickets){
+          self.setData({
+            resultShow:false,
+            showRight:false,
+            myAnswerRight:0,
+            myAnswerError:0
+          })
+          self.addOne();
+        }else{
+          wx.showModal({
+            title: '提示',
+            content: "请转发到群！",
+            showCancel:false,
+            success: function(res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
+        }
       }
     }
   }
-
 });

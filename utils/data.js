@@ -1,4 +1,4 @@
-var host = 'http://www.peinilol.com';
+var host = 'https://www.peinilol.com';
 
 var nIndex = {
   "1": "一",

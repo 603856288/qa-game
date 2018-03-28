@@ -1,10 +1,10 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/fail/fail",
+    "pages/success/success",
     "pages/qa/qa",
     "pages/information/information",
-    "pages/success/success",
-    "pages/fail/fail",
     "pages/moreChance/moreChance",
     "pages/award/award",
     "pages/ready/ready"

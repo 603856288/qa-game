@@ -15,6 +15,11 @@ Page({
       qaIndex:qaIndex
     })
   },
+  returnIndex:function(){
+    wx.switchTab({
+      url:"/pages/index/index"
+    })
+  },
   continue:function(){
     wx.showLoading();
     var param={

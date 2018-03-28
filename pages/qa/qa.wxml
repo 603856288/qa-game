@@ -23,7 +23,7 @@
 <view class="result_false"  wx:if="{{resultShow}}">
   <view class="mask" bindtap="hideResult"></view>
   <view class="resultInner">
-    <view class="re_h">回答错误<!-- <text class="close"></text> --></view>
+    <view class="re_h">回答错误<text class="close" bindtap="closeBtn"></text></view>
     <view class="re_p1">一不小心手滑了？</view>
     <view class="re_p2">还差<text >{{11-qaIndex}}</text>题抢皮肤</view>
     <view class="re_p3">转发到群立即复活</view>
