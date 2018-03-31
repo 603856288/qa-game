@@ -1,7 +1,9 @@
 <import src="../../components/wetoast/wetoast.wxml" />
 <view class="container">
   <view class="award">  
-    <view class="guide"></view>
+    <view class="guide">
+      <button class="fixGzhBtn " open-type="contact"></button> 
+    </view>
     <view class="head">
       <image class="headImg" src="{{avatarUrl}}" mode="aspectFit" />
     </view>

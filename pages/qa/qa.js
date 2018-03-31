@@ -54,6 +54,43 @@ Page({
       }
     });
   },
+  /*onShow:function(){
+    wx.showLoading();
+    var param={
+      'openId':wx.getStorageSync('openId')
+    }
+    wx.request({
+      url: host + '/api/challenge', // 目标服务器 url
+      dataType: 'json',
+      method: 'POST',
+      data: param,
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'token':wx.getStorageSync('token')
+      },
+      success: (res) => {
+        var res = res.data;
+        console.log(res.data)
+        this.setData({
+          list:res.data,
+          resultShow:false,
+          showRight:false,
+          myAnswerRight:0,
+          myAnswerError:0
+        })
+        this.showQA();
+      },
+      fail: (res) => {
+
+      },
+      complete: (res) => {
+        wx.hideLoading();
+      }
+    });
+  },*/
+  onHide:function(){
+
+  },
   showQA:function(){
     var self = this;
     var index = self.data.qaIndex;
@@ -87,13 +124,13 @@ Page({
         obj.result = false;
         arr.push(obj);
         console.log(arr)
-        if(index>3&&index<7){
+        /*if(index>3&&index<7){
           self.isNeedGzh();
         }else{
           self.setData({
             needGzh:1
           })
-        }
+        }*/
         self.setData({
           resultShow:true,
           myAnswerRight:answer,
@@ -112,6 +149,7 @@ Page({
   },
   chooseOne:function(e){
     var self = this;
+    clearInterval(self.data.timer);
     var index = e.currentTarget.dataset.index;
     var answer = self.data.answer;
     var qaIndex = self.data.qaIndex;
@@ -130,13 +168,13 @@ Page({
         self.addOne();
       },1000)
     }else{
-      if(qaIndex>3&&qaIndex<7){
+      /*if(qaIndex>3&&qaIndex<7){
         self.isNeedGzh();
       }else{
         self.setData({
           needGzh:1
         })
-      }
+      }*/
       self.setData({
         result:false,
         resultShow:true,
@@ -193,6 +231,38 @@ Page({
       }
     });
   },
+  btnGzh:function(){
+    var self = this;
+    var param = {
+      openId:wx.getStorageSync('openId')
+    }
+    //wx.showLoading();
+    wx.request({
+      url: host + '/api/atten', // 目标服务器 url
+      dataType: 'json',
+      data:param,
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'token':wx.getStorageSync('token')
+      },
+      success: (res) => {
+        self.setData({
+          resultShow:false,
+          showRight:false,
+          myAnswerRight:0,
+          myAnswerError:0
+        })
+        self.addOne();
+      },
+      fail: (res) => {
+
+      },
+      complete: (res) => {
+        //wx.hideLoading();
+      }
+    });
+  },
   submitChallenge:function(tf){
     var self = this;
     var param = {
@@ -239,6 +309,7 @@ Page({
       path: '/pages/index/index?recommendOpenId=' + openId,
       success:function(e){
         if(e.shareTickets){
+          console.log(e)
           self.setData({
             resultShow:false,
             showRight:false,

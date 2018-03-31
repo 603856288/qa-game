@@ -47,6 +47,11 @@ page{
 	top:260rpx;
 	right:0;
 }
+.fixGzhBtn{
+	width: 100%;
+	height:100%;
+	opacity: 0;
+}
 .award .content{
 	font-size: 28rpx;
 	color:#fff;
