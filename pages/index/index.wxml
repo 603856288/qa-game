@@ -2,7 +2,9 @@
 <view class="container">
   <view class="banner">
   	<view class="beginBtn" bindtap="continue"></view>
-  	<view class="fixGzh" bindtap="findGzh"></view>
+  	<view class="fixGzh">
+      <button class="fixGzhBtn " open-type="contact"></button> 
+    </view>
   </view>
   <view class="home_tips">转发到不同群，挑战机会增加</view>
   <view class="content">

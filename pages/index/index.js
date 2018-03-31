@@ -88,9 +88,11 @@ Page({
     })
   },
   onShareAppMessage: function () {
+    var openId = wx.getStorageSync('openId');
+    console.log(openId)
     return {
       title: '小信老师',
-      path: '/pages/index/index'
+      path: '/pages/index/index?recommendOpenId=' + openId
     }
   }
 

@@ -27,7 +27,8 @@
     <view class="re_p1">一不小心手滑了？</view>
     <view class="re_p2">还差<text >{{11-qaIndex}}</text>题抢皮肤</view>
     <view class="re_p3">转发到群立即复活</view>
-    <button class="btnShare" open-type="share">立即复活</button>
+    <button class="btnShare" wx:if="{{needGzh==1}}" open-type="share" >立即复活</button>
+    <button class="btnShare" wx:if="{{needGzh==0}}" open-type="contact">立即复活</button>
   </view>  
 </view>
 <!-- wetoast -->

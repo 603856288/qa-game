@@ -4,7 +4,14 @@ const host = require('./utils/data.js').host;
 
 App({
   WeToast,
-  onLaunch: function () {
+  onLaunch: function (options) {
+    //console.log(options.query.recommendOpenId)
+    //wx.clearStorageSync();
+    wx.removeStorageSync('recommendOpenId');
+    if(options.query.recommendOpenId){
+      wx.setStorageSync('recommendOpenId',options.query.recommendOpenId);
+      console.log(wx.getStorageSync('recommendOpenId'));
+    }
     this.getLogin();
   },
   getLogin:function(){
@@ -50,7 +57,10 @@ App({
                     url: host + "/api/updateUser",
                     method: "POST",
                     data: param,
-                    header: { "content-type": 'application/x-www-form-urlencoded' },
+                    header: {
+                      'content-type': 'application/x-www-form-urlencoded',
+                      'token':wx.getStorageSync('token')
+                    },
                     success: (res => {
                       
                     }),
@@ -58,6 +68,33 @@ App({
 
                     })
                   })
+
+                  var recommendOpenId = wx.getStorageSync('recommendOpenId');
+                  if(recommendOpenId){
+                    var paramVal={
+                      'recommendOpenId':recommendOpenId,
+                      'openId':wx.getStorageSync('openId')
+                    }
+                    wx.request({
+                      url: host + '/api/fromShare', // 目标服务器 url
+                      dataType: 'json',
+                      method: 'POST',
+                      data: paramVal,
+                      header: {
+                        'content-type': 'application/x-www-form-urlencoded',
+                        'token':wx.getStorageSync('token')
+                      },
+                      success: (res) => {
+                        
+                      },
+                      fail: (res) => {
+
+                      },
+                      complete: (res) => {
+                        //wx.hideLoading();
+                      }
+                    });   
+                  }
                 }
               })
             }),
