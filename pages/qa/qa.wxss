@@ -52,14 +52,14 @@ page{
 }
 .question .t{
 	text-align: center;
-	font-size:23rpx;
+	font-size:32rpx;
 	color:#4f1a00;
 }
 .question .d{
-	margin-top: 30rpx;
+	margin-top: 25rpx;
 	text-align: center;
-	font-size:27rpx;
-	line-height: 36rpx;
+	font-size:32rpx;
+	line-height: 42rpx;
 	color:#4f1a00;
 }
 .question .result_true{
@@ -96,7 +96,7 @@ page{
 	background: #ffffe9;
 	border-radius: 13rpx;
 	text-align: center;
-	font-size: 27rpx;
+	font-size: 32rpx;
 	color: #4f1a00;
 }
 .ans_true{

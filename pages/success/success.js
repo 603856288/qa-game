@@ -64,6 +64,7 @@ Page({
     var openId = wx.getStorageSync('openId');
     return {
       title: '小信老师',
+      imageUrl: 'https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/shareImg.png',
       path: '/pages/index/index?recommendOpenId=' + openId
     }
   }

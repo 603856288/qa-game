@@ -3,7 +3,8 @@ const app = getApp();
 Page({
   data: {
     tabIndex:0,
-    dialog_gzhShow:false
+    dialog_gzhShow:false,
+    dialog_notesShow:false
   },
   onLoad() {
     new app.WeToast();//加载错误提示框
@@ -84,7 +85,13 @@ Page({
   },
   hideDialog:function(){
     this.setData({
-      dialog_gzhShow:false
+      dialog_gzhShow:false,
+      dialog_notesShow:false
+    })
+  },
+  getRules:function(){
+    this.setData({
+      dialog_notesShow:true
     })
   },
   onShareAppMessage: function () {
@@ -92,6 +99,7 @@ Page({
     console.log(openId)
     return {
       title: '小信老师',
+      imageUrl: 'https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/shareImg.png',
       path: '/pages/index/index?recommendOpenId=' + openId
     }
   }

@@ -137,7 +137,7 @@ Page({
           chooseArr:arr
         })
 
-        if(index>6){
+        if(index>7){
           self.submitChallenge(false);
         }  
       }
@@ -181,7 +181,7 @@ Page({
         myAnswerRight:answer,
         myAnswerError:index
       })
-      if(qaIndex>6){
+      if(qaIndex>7){
         self.submitChallenge(false);
       }  
     }
@@ -306,6 +306,7 @@ Page({
     var openId = wx.getStorageSync('openId');
     return {
       title: '小信老师',
+      imageUrl: 'https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/shareImg.png',
       path: '/pages/index/index?recommendOpenId=' + openId,
       success:function(e){
         if(e.shareTickets){
