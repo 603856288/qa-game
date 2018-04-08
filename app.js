@@ -16,11 +16,11 @@ App({
   },
   getLogin:function(){
     var self = this;
-    wx.showToast({
+    /*wx.showToast({
       title: '成功',
       icon: 'success',
       duration: 2000
-    })
+    })*/
     wx.login({
       success: function(res) {
         //console.log(res)

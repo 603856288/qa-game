@@ -203,3 +203,17 @@ page{
 	color: #fefefe;
 	text-align: center;
 }
+.content .part03{
+	max-height: 834rpx;
+}
+.content .part03 .skin{
+	padding: 10rpx 30rpx;
+	width:600rpx;
+	margin:0 auto 34rpx;
+	background-color: #dce8ff;
+}
+.content .part03 .skin image{
+	width: 600rpx;
+	height: 338rpx;
+}
+

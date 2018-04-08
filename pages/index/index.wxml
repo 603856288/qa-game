@@ -36,9 +36,25 @@
 		<view class="info">转发到微信群即可查看群内智力排行了~</view>
 		<button class="btnShare" open-type="share">分享到微信群</button>
   	</view>
-  	<view class="part03"></view>
+  	<view class="part03" wx:if="{{tabIndex==2}}">
+     <view class="skin">
+       <image class="face" src="https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/show_luban.png" mode="aspectFit" />
+     </view> 
+     <view class="skin">
+       <image class="face" src="https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/show_ssx.png" mode="aspectFit" />
+     </view> 
+     <view class="skin">
+       <image class="face" src="https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/show_hz.png" mode="aspectFit" />
+     </view> 
+     <view class="skin">
+       <image class="face" src="https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/show_dc.png" mode="aspectFit" />
+     </view> 
+     <view class="skin">
+       <image class="face" src="https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/show_lb.png" mode="aspectFit" />
+     </view> 
+    </view>
   </view>
-  <view class="dialog_gzh"  wx:if="{{dialog_gzhShow}}">
+  <view class="dialog_gzh" wx:if="{{dialog_gzhShow}}">
     <view class="mask" bindtap="hideDialog"></view>
     <view class="gzhInner">
       <view><image class="erweima" src="../../images/erweima.jpg" mode="aspectFit" /></view>
