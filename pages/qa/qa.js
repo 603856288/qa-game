@@ -1,5 +1,6 @@
 const host = require('../../utils/data.js').host;
 const nIndex = require('../../utils/data.js').nIndex;
+const app_recover_share_icon = require('../../utils/data.js').app_recover_share_icon;
 const app = getApp();
 Page({
   data: {
@@ -139,7 +140,7 @@ Page({
 
         if(index>7){
           self.submitChallenge(false);
-        }  
+        }
       }
     },1000);
 
@@ -183,7 +184,7 @@ Page({
       })
       if(qaIndex>7){
         self.submitChallenge(false);
-      }  
+      }
     }
     var arr = self.data.chooseArr,obj={};
     obj.qId = self.data.qaId;
@@ -285,7 +286,7 @@ Page({
         if(!tf){
            wx.redirectTo({
             url:"/pages/fail/fail?qaIndex=" + self.data.qaIndex
-          }) 
+          })
         }else{
           wx.redirectTo({
             url:"/pages/success/success"
@@ -304,9 +305,11 @@ Page({
     var self = this;
     var qaIndex = self.data.qaIndex;
     var openId = wx.getStorageSync('openId');
+    var title = '['+wx.getStorageSync('nickName')+"@我"+']'+'你有一款王者荣耀皮肤可以免费领取！赶紧去领取!'
+
     return {
-      title: '小信老师',
-      imageUrl: 'https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/shareImg.png',
+      title: title,
+      imageUrl: app_recover_share_icon,
       path: '/pages/index/index?recommendOpenId=' + openId,
       success:function(e){
         if(e.shareTickets){

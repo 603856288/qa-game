@@ -62,44 +62,17 @@ App({
                       'token':wx.getStorageSync('token')
                     },
                     success: (res => {
-                      
+
                     }),
                     fail: (error => {
 
                     })
                   })
-
-                  var recommendOpenId = wx.getStorageSync('recommendOpenId');
-                  if(recommendOpenId){
-                    var paramVal={
-                      'recommendOpenId':recommendOpenId,
-                      'openId':wx.getStorageSync('openId')
-                    }
-                    wx.request({
-                      url: host + '/api/fromShare', // 目标服务器 url
-                      dataType: 'json',
-                      method: 'POST',
-                      data: paramVal,
-                      header: {
-                        'content-type': 'application/x-www-form-urlencoded',
-                        'token':wx.getStorageSync('token')
-                      },
-                      success: (res) => {
-                        
-                      },
-                      fail: (res) => {
-
-                      },
-                      complete: (res) => {
-                        //wx.hideLoading();
-                      }
-                    });   
-                  }
                 }
               })
             }),
             fail: (error => {
-              
+
             }),
             complete: (res) => {
               wx.hideLoading();

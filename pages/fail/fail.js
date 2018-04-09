@@ -1,4 +1,6 @@
 const host = require('../../utils/data.js').host;
+const app_recover_share_icon = require('../../utils/data.js').app_recover_share_icon;
+
 const app = getApp();
 Page({
   data: {
@@ -57,7 +59,7 @@ Page({
       complete: (res) => {
         wx.hideLoading();
       }
-    });    
+    });
   },
   findGzh:function(){
     this.setData({
@@ -90,14 +92,14 @@ Page({
           that.wetoast.toast({
               title: res.data.msg,
               duration: 2000
-          }) 
+          })
         }else{
           // 回执失败
           if (res.data.msg) {
             that.wetoast.toast({
                 title: res.data.msg,
                 duration: 2000
-            })            
+            })
           }
         }
       },
@@ -113,9 +115,10 @@ Page({
     var openId = wx.getStorageSync('openId');
     console.log(openId)
     var that = this;
+    var title = '['+wx.getStorageSync('nickName')+"@我"+']'+'你有一款王者荣耀皮肤可以免费领取！赶紧去领取!'
     return {
-      title: '小信老师',
-      imageUrl: 'https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/shareImg.png',
+      title: title,
+      imageUrl: app_recover_share_icon,
       path: '/pages/index/index?recommendOpenId=' + openId,
       success: function(res) {
         // 转发成功
