@@ -21,7 +21,7 @@
         <block wx:for="{{menuList}}">
           <view class="listItem {{index==(menuList.length-1)?'last':''}}">
             <view class="num {{index==0?'numOne':index==1?'numTwo':index==2?'numThree':''}}">{{index+1}}</view>
-            <image class="face" src="../../images/face.png" mode="aspectFit" />
+            <image class="face" src="{{item.portrait}}" mode="aspectFit" />
             <text class="name">{{item.name}}</text>
             <view class="itemDetail">
               <view>获得皮肤<text class="fontType01">{{item.totalGiftNum}}</text>个</view>

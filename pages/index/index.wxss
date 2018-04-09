@@ -156,6 +156,7 @@ page{
 	width: 66rpx;
 	height: 66rpx;
 	margin-right: 10rpx;
+	border-radius:100%;
 }
 .content .part01 .name{
 
