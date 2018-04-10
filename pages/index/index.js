@@ -9,6 +9,9 @@ Page({
     dialog_notesShow:false
   },
   onLoad() {
+    this.setData({
+      totalChallengeCount :  wx.getStorageSync('totalChallengeCount')
+    })
     new app.WeToast();//加载错误提示框
     wx.showShareMenu({
       withShareTicket: true

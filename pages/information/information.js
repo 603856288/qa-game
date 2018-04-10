@@ -107,7 +107,7 @@ Page({
       },
       dataType: 'json',
       success: (res) => {
-        var res = res.data;
+        wx.setStorageSync('totalChallengeCount',res.data.data.totalChallengeCount);
         self.wetoast.toast({
             title: "保存成功",
             duration: 1000
