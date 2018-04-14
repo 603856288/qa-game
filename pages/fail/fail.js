@@ -19,6 +19,12 @@ Page({
     this.setData({
       qaIndex:qaIndex
     })
+
+    wx.playBackgroundAudio({
+      dataUrl: 'http://7xq41n.com1.z0.glb.clouddn.com/%E5%A4%B1%E8%B4%A5%20%E9%9F%B3%E6%95%88%20%E5%8A%A0%E9%80%9F%E8%BF%87%E7%9A%84%20%E7%94%A8%E8%BF%99%E4%B8%AA.mp3',
+      title: '',
+      coverImgUrl: ''
+    })
   },
   returnIndex:function(){
     wx.switchTab({

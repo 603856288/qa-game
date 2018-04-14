@@ -168,6 +168,13 @@ Page({
         })
         self.addOne();
       },1000)
+
+      wx.playBackgroundAudio({
+        dataUrl: 'http://7xq41n.com1.z0.glb.clouddn.com/%E7%AD%94%E5%AF%B9.mp3',
+        title: '',
+        coverImgUrl: ''
+      })
+
     }else{
       /*if(qaIndex>3&&qaIndex<7){
         self.isNeedGzh();
@@ -176,6 +183,13 @@ Page({
           needGzh:1
         })
       }*/
+
+      wx.playBackgroundAudio({
+        dataUrl: 'http://7xq41n.com1.z0.glb.clouddn.com/%E7%AD%94%E9%94%99.mp3',
+        title: '',
+        coverImgUrl: ''
+      })
+
       self.setData({
         result:false,
         resultShow:true,
@@ -264,7 +278,17 @@ Page({
       }
     });
   },
+
   submitChallenge:function(tf){
+
+    // if (!tf) {
+    //   wx.playBackgroundAudio({
+    //     dataUrl: 'http://7xq41n.com1.z0.glb.clouddn.com/%E5%A4%B1%E8%B4%A5%20%E9%9F%B3%E6%95%88%20%E5%8A%A0%E9%80%9F%E8%BF%87%E7%9A%84%20%E7%94%A8%E8%BF%99%E4%B8%AA.mp3',
+    //     title: '',
+    //     coverImgUrl: ''
+    //   })
+    // }
+
     var self = this;
     var param = {
       openId:wx.getStorageSync('openId'),

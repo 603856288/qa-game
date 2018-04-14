@@ -29,6 +29,12 @@ Page({
         clearInterval(timer);
       }
     },1000);
+
+    wx.playBackgroundAudio({
+    dataUrl: 'http://7xq41n.com1.z0.glb.clouddn.com/%E6%8C%91%E6%88%98%E5%BC%80%E5%A7%8B.mp3',
+    title: '',
+    coverImgUrl: ''
+})
   },
   receiptShareSuccess: function (ticket, iv, encryptedData) {
       var paramVal={
