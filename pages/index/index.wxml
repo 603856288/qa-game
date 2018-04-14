@@ -84,6 +84,18 @@
       </view>
     </view>
   </view>
+
+
+  <view class="dialog_notes"  wx:if="{{dialog_morechallenge_NotesShow}}">
+    <view class="mask" bindtap="hideDialog"></view>
+    <view class="morechallenge_notesInner">
+      <view class="btnClose" bindtap="hideDialog"></view>
+      <view class="ttt">获得挑战机会</view>
+      <!-- <view class="shareview" catchtap='getMoreChallenge'>      </view> -->
+      <button class="shareview" open-type="share"></button>
+    </view>
+  </view>
+
 </view>
 <!-- wetoast -->
 <template is="wetoast" data="{{...__wetoast__}}" />
