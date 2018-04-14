@@ -57,19 +57,17 @@ Page({
       success: (res) => {
         var res = res.data;
         var challengeHaveCount = res.data.challengeHaveCount;
-        challengeHaveCount = 0
-        if(challengeHaveCount>0){
+        if(challengeHaveCount>0) {
           wx.redirectTo({
             url: '/pages/ready/ready'
           })
         }else{
-
           this.setData({
             dialog_morechallenge_NotesShow:true
           })
           this.wetoast.toast({
               title: "今天挑战机会已用完，请明天再来！",
-              duration: 2000
+              duration: 1000
           })
         }
       },
