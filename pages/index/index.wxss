@@ -27,6 +27,35 @@ page{
 	top:13rpx;
 	left:38rpx;
 }
+
+.totalChallenge{
+	position: absolute;
+	text-align: center;
+	bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+	width: 750rpx;
+}
+
+.totalChallenge .text1{
+	font-size: 24rpx;
+	color: #ffffff;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+.totalChallenge .text3{
+	font-size: 24rpx;
+	color: #ffffff;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+.totalChallenge .text2{
+	font-size: 32rpx;
+	color: red;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+
 .beginBtn{
 	background:url(https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/btna1.png) no-repeat center;
 	background-size: 413rpx 275rpx;
@@ -115,7 +144,7 @@ page{
 }
 .content .part01 .pt{
 	padding:40rpx 30rpx;
-	text-align: center;	
+	text-align: center;
 	font-size: 41rpx;
 	color: #43609a;
 	border-bottom: 2rpx solid #9dafd2;
@@ -156,12 +185,13 @@ page{
 	width: 66rpx;
 	height: 66rpx;
 	margin-right: 10rpx;
+	border-radius:100%;
 }
 .content .part01 .name{
 
 }
 .content .part01 .itemDetail{
-    margin-left: auto; 
+    margin-left: auto;
     text-align: right;
 }
 .content .part01 .fontType01{
@@ -216,4 +246,3 @@ page{
 	width: 600rpx;
 	height: 338rpx;
 }
-

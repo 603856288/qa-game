@@ -62,7 +62,7 @@ App({
                       'token':wx.getStorageSync('token')
                     },
                     success: (res => {
-
+                      wx.setStorageSync('totalChallengeCount',res.data.data.totalChallengeCount);
                     }),
                     fail: (error => {
 
