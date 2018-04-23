@@ -7,11 +7,14 @@ Page({
     tabIndex:0,
     dialog_gzhShow:false,
     dialog_notesShow:false,
-    dialog_morechallenge_NotesShow:false
+    dialog_morechallenge_NotesShow:false,
+
   },
   onLoad() {
     this.setData({
-      totalChallengeCount :  wx.getStorageSync('totalChallengeCount')
+      totalChallengeCount :  wx.getStorageSync('totalChallengeCount'),
+      user_open_id: wx.getStorageSync('openId'),
+      user_nick_name:  wx.getStorageSync('nickName'),
     })
     new app.WeToast();//加载错误提示框
     wx.showShareMenu({

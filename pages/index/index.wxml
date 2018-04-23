@@ -72,7 +72,7 @@
       <view class="btnClose" bindtap="hideDialog"></view>
       <view class="ttt">挑战成功获得奖品</view>
       <view class="ddd">1、每人可免费获得一次挑战机会，同时将“小信老师”小程序分享到微信群后可额外获得免费的挑战机会。</view>
-      <view class="ddd">2、为更大成都助力你获得皮肤，请分享到王者荣耀相关游戏群。</view>
+      <view class="ddd">2、为更大程度助力你获得皮肤，请分享到王者荣耀相关游戏群。</view>
       <view class="ddd">3、每次挑战包含12道题目，全部答对即可获得皮肤。</view>
       <view class="ddd">4、挑战成功后可获得精美皮肤，你可以通过皮肤列表选取自己喜欢的皮肤。</view>
       <view class="ddd">5、通关成功后联系客服兑换皮肤，我们将会在15个工作日内进行兑换。</view>

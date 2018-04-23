@@ -6,6 +6,8 @@ Page({
   data: {
     avatarUrl:wx.getStorageSync('avatarUrl'),
     nickName:wx.getStorageSync('nickName'),
+    user_open_id: wx.getStorageSync('openId'),
+    user_nick_name: wx.getStorageSync('nickName'),
     resultShow:true
   },
   onLoad(){
