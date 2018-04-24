@@ -1,0 +1,8 @@
+<import src="../../components/wetoast/wetoast.wxml" />
+<view class="container">
+  <view class="banner">
+  	<view class="beginBtn" bindtap="receiveaward"></view>
+  </view>
+</view>
+<!-- wetoast -->
+<template is="wetoast" data="{{...__wetoast__}}" />
