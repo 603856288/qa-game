@@ -90,7 +90,7 @@ Page({
     }
     wx.showLoading();
     var param={
-      'name':obj.name,
+      'nickName':obj.name,
       'phone':obj.phone,
       'qq':obj.qq,
       'wechat_id':obj.wechat_id,

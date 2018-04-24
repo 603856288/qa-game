@@ -196,7 +196,7 @@ Page({
         myAnswerRight:answer,
         myAnswerError:index
       })
-      if(qaIndex>7){
+      if(qaIndex>5){
         self.submitChallenge(false);
       }
     }
