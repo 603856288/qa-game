@@ -1,0 +1,36 @@
+/* pages/blogaward/blogaward.wxss */
+
+@import "../../assets/stylesheets/base.wxss";
+@import "../../assets/stylesheets/common.wxss";
+page{
+	background:#222d42;
+}
+
+.container {
+	background:url(https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/bg.jpg) no-repeat center -140rpx;
+	background-size: 750rpx 1333rpx;
+	position:relative;
+	width:100%;
+	font-size:32rpx;
+}
+
+.banner{
+	background:url(http://7xq41n.com1.z0.glb.clouddn.com/index_ban.png) no-repeat center;
+	background-size: 730rpx 560rpx;
+	width: 100%;
+	height:560rpx;
+	margin-top: 30rpx;
+	position: relative;
+}
+
+.beginBtn{
+	background:url(https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/btna1.png) no-repeat center;
+	background-size: 413rpx 275rpx;
+	width: 413rpx;
+	height:275rpx;
+	position: absolute;
+	bottom: -205rpx;
+	left:50%;
+	transform:translate(-50%,0);
+	-webkit-transform:translate(-50%,0);
+}

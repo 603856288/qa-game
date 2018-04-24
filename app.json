@@ -1,5 +1,6 @@
 {
-  "pages":[
+  "pages": [
+    "pages/blogaward/blogaward",
     "pages/index/index",
     "pages/fail/fail",
     "pages/success/success",
@@ -9,11 +10,11 @@
     "pages/award/award",
     "pages/ready/ready"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [
