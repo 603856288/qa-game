@@ -138,7 +138,7 @@ Page({
           chooseArr:arr
         })
 
-        if(index>7){
+        if(index>5){
           self.submitChallenge(false);
         }
       }
