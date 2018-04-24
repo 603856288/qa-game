@@ -15,7 +15,7 @@ page{
 }
 
 .banner{
-	background:url(http://7xq41n.com1.z0.glb.clouddn.com/index_ban.png) no-repeat center;
+	background:url(http://7xq41n.com1.z0.glb.clouddn.com/%E8%83%8C%E6%99%AF%E5%9B%BE-png.png) no-repeat center;
 	background-size: 730rpx 560rpx;
 	width: 100%;
 	height:560rpx;
@@ -24,7 +24,7 @@ page{
 }
 
 .beginBtn{
-	background:url(https://staticdaily.zhongan.com/website/open/assets/wp/qaGame/btna1.png) no-repeat center;
+	background:url(http://7xq41n.com1.z0.glb.clouddn.com/%E6%8C%89%E9%92%AE-png.png) no-repeat center;
 	background-size: 413rpx 275rpx;
 	width: 413rpx;
 	height:275rpx;

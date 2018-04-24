@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/blogaward/blogaward",
     "pages/index/index",
     "pages/fail/fail",
     "pages/success/success",
@@ -8,7 +7,8 @@
     "pages/information/information",
     "pages/moreChance/moreChance",
     "pages/award/award",
-    "pages/ready/ready"
+    "pages/ready/ready",
+    "pages/blogaward/blogaward"
   ],
   "window": {
     "backgroundTextStyle": "light",
