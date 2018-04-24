@@ -1,8 +1,8 @@
 <import src="../../components/wetoast/wetoast.wxml" />
 <view class="container">
-  <view class="award">  
+  <view class="award">
     <view class="guide">
-      <button class="fixGzhBtn " open-type="contact"></button> 
+      <button class="fixGzhBtn " bindtap="showModelAction"></button>
     </view>
     <view class="head">
       <image class="headImg" src="{{avatarUrl}}" mode="aspectFit" />
@@ -26,10 +26,25 @@
     </view>
     <view class="bottom_btn">
       <button class="btnL" open-type="share">炫耀战绩</button>
-      <button class="btnR" open-type="share">获得挑战机会</button>
+      <button class="btnR" bindtap="showModelAction">获得挑战机会</button>
     </view>
-  </view>  
+  </view>
   <view class="moreChange">更多智力挑战</view>
+
 </view>
+
+<view class="model {{isShowModel?'show':'close'}}" catchtouchmove="preventTouchMove">
+  <!--弹窗样式可自定义-->
+  <view class="model-pack">
+    <view class="model-title">{{ModelTitle}}</view>
+    <view class="model-content">{{ModelContent}}</view>
+    <view class="model-button">
+      <view data-modelid="{{ModelId}}" class="model-button-cancel {{isShowConfirm?'close':'show'}}" bindtap="cancel">取消</view>
+      <button  class="model-button-confirm {{isShowConfirm?'close':'show'}}" open-type="contact" type="primary" plain="true">确定</button>
+    </view>
+  </view>
+</view>
+
+
 <!-- wetoast -->
 <template is="wetoast" data="{{...__wetoast__}}" />

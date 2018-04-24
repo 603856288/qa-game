@@ -7,7 +7,8 @@ Page({
     avatarUrl:wx.getStorageSync('avatarUrl'),
     nickName:wx.getStorageSync('nickName'),
     resultShow:true,
-    qaIndex:""
+    qaIndex:"",
+    isShowModel: false,//控制弹窗是否显示，默认不显示
   },
   onLoad(e) {
     wx.showShareMenu({
@@ -156,4 +157,41 @@ Page({
         }
       }
     },
+
+         showModelAction: function () {
+           this.showModel({
+             ModelId: 1,
+             ModelTitle: '温馨提示',
+             ModelContent: "进入客服对话后，回复 \"1\" 关注公众号领取挑战次数+5"
+           })
+         },
+          //调用模态弹窗
+          showModel: function (e){
+            //将传过来的标题和内容展示到弹窗上
+            this.setData({
+              isShowModel: true,
+              ModelId: e.ModelId,
+              ModelTitle: e.ModelTitle,
+              ModelContent: e.ModelContent
+            })
+          },
+          //取消事件
+          cancel: function(e){
+            if (e.currentTarget.dataset.modelid == 0){
+              console.log("用户点击了取消(1)")
+            } else if (e.currentTarget.dataset.modelid == 1){
+              console.log("用户点击了取消(2)")
+            }
+            //关闭模态弹窗
+            this.setData({
+              isShowModel: false
+            })
+          },
+          //确定事件
+          confirm: function(e){
+            this.setData({
+              isShowModel: false
+            })
+          },
+
 });

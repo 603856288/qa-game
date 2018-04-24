@@ -9,7 +9,7 @@
     </view>
   	<view class="beginBtn" bindtap="continue"></view>
   	<view class="fixGzh">
-      <button class="fixGzhBtn " open-type="contact"></button>
+      <button class="fixGzhBtn " bindtap="showModelAction"></button>
     </view>
   </view>
   <button class="home_tips" open-type="share">转发到不同群，挑战机会增加</button>
@@ -96,6 +96,21 @@
     </view>
   </view>
 
+  <view class="model {{isShowModel?'show':'close'}}" catchtouchmove="preventTouchMove">
+    <!--弹窗样式可自定义-->
+    <view class="model-pack">
+      <view class="model-title">{{ModelTitle}}</view>
+      <view class="model-content">{{ModelContent}}</view>
+      <view class="model-button">
+        <view data-modelid="{{ModelId}}" class="model-button-cancel {{isShowConfirm?'close':'show'}}" bindtap="cancel">取消</view>
+        <button  class="model-button-confirm {{isShowConfirm?'close':'show'}}" open-type="contact" type="primary" plain="true">确定</button>
+      </view>
+    </view>
+  </view>
+
+
 </view>
+
+
 <!-- wetoast -->
 <template is="wetoast" data="{{...__wetoast__}}" />

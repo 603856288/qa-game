@@ -1,6 +1,6 @@
 <import src="../../components/wetoast/wetoast.wxml" />
 <view class="container">
-  <view class="success">  
+  <view class="success">
     <view class="head">
       <image class="headImg" src="{{avatarUrl}}" mode="aspectFit" />
     </view>
@@ -12,15 +12,30 @@
     <view class="p2">再接再厉哦！</view>
     <button class="btn_re bg_426098" bindtap="continue">继续挑战</button>
     <button class="btn_re bg_426098" bindtap="returnIndex">回到首页</button>
-    <button class="btn_re " open-type="contact">偷看答案</button>
+    <button class="btn_re " bindtap="showModelAction">偷看答案</button>
     <view class="p3">关注公众号即可偷看答案</view>
-  </view>  
+  </view>
   <view class="dialog_gzh"  wx:if="{{dialog_gzhShow}}">
     <view class="mask" bindtap="hideDialog"></view>
     <view class="gzhInner">
       <view><image class="erweima" src="../../images/erweima.jpg" mode="aspectFit" /></view>
-    </view>  
+    </view>
   </view>
 </view>
+
+
+<view class="model {{isShowModel?'show':'close'}}" catchtouchmove="preventTouchMove">
+  <!--弹窗样式可自定义-->
+  <view class="model-pack">
+    <view class="model-title">{{ModelTitle}}</view>
+    <view class="model-content">{{ModelContent}}</view>
+    <view class="model-button">
+      <view data-modelid="{{ModelId}}" class="model-button-cancel {{isShowConfirm?'close':'show'}}" bindtap="cancel">取消</view>
+      <button  class="model-button-confirm {{isShowConfirm?'close':'show'}}" open-type="contact" type="primary" plain="true">确定</button>
+    </view>
+  </view>
+</view>
+
+
 <!-- wetoast -->
 <template is="wetoast" data="{{...__wetoast__}}" />
