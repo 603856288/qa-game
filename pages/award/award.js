@@ -168,4 +168,11 @@ Page({
         })
       },
 
+      onHide: function () {
+        this.setData({
+          isShowModel: false
+        })
+      },
+
+
   });

@@ -297,6 +297,8 @@ page{
   line-height: 2.5rem;
   box-sizing: border-box;
   border-right: 1px solid #eee;
+  font-size: 18px;
+  color:#999;
 }
 .model-button-confirm{
   width: 50%;

@@ -102,7 +102,7 @@
       <view class="model-title">{{ModelTitle}}</view>
       <view class="model-content">{{ModelContent}}</view>
       <view class="model-button">
-        <view data-modelid="{{ModelId}}" class="model-button-cancel {{isShowConfirm?'close':'show'}}" bindtap="cancel">取消</view>
+        <view data-modelid="{{ModelId}}" class="model-button-cancel {{isShowConfirm?'close':'show'}}">取消</view>
         <button  class="model-button-confirm {{isShowConfirm?'close':'show'}}" open-type="contact" type="primary" plain="true">确定</button>
       </view>
     </view>

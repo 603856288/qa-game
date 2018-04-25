@@ -242,4 +242,21 @@ Page({
     }
   },
 
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+    this.setData({
+      isShowModel: false
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+    console.log('onUnload')
+  },
+
 });
