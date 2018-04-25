@@ -4,6 +4,7 @@ const app_recover_share_icon = require('../../utils/data.js').app_recover_share_
 const app = getApp();
 Page({
   data: {
+    disabled:false,
     avatarUrl:wx.getStorageSync('avatarUrl'),
     nickName:wx.getStorageSync('nickName'),
     resultShow:false,
@@ -94,6 +95,9 @@ Page({
   },
   showQA:function(){
     var self = this;
+    self.setData({
+      disabled:false
+    })
     var index = self.data.qaIndex;
     if(index>11){
       self.submitChallenge(true);
@@ -143,13 +147,15 @@ Page({
         }
       }
     },1000);
-
   },
   closeBtn:function(){
     this.submitChallenge(false);
   },
   chooseOne:function(e){
     var self = this;
+    self.setData({
+      disabled:true
+    })
     clearInterval(self.data.timer);
     var index = e.currentTarget.dataset.index;
     var answer = self.data.answer;

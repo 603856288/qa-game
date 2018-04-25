@@ -13,10 +13,10 @@
       <view class="result_true" wx-if="{{showRight}}">回答正确</view>
     </view>
     <view class="answer">
-      <view class="ans {{myAnswerRight==1?'ans_true':''}} {{myAnswerError==1?'ans_false':''}}" bindtap="chooseOne" data-index="1">{{option1}}</view>
-      <view class="ans {{myAnswerRight==2?'ans_true':''}} {{myAnswerError==2?'ans_false':''}}" bindtap="chooseOne" data-index="2">{{option2}}</view>
-      <view class="ans {{myAnswerRight==3?'ans_true':''}} {{myAnswerError==3?'ans_false':''}}" bindtap="chooseOne" data-index="3">{{option3}}</view>
-      <view class="ans {{myAnswerRight==4?'ans_true':''}} {{myAnswerError==4?'ans_false':''}}" bindtap="chooseOne" data-index="4">{{option4}}</view>
+      <view class="ans {{myAnswerRight==1?'ans_true':''}} {{myAnswerError==1?'ans_false':''}}" bindtap="{{!disabled?'chooseOne':''}}" data-index="1">{{option1}}</view>
+      <view class="ans {{myAnswerRight==2?'ans_true':''}} {{myAnswerError==2?'ans_false':''}}" bindtap="{{!disabled?'chooseOne':''}}" data-index="2">{{option2}}</view>
+      <view class="ans {{myAnswerRight==3?'ans_true':''}} {{myAnswerError==3?'ans_false':''}}" bindtap="{{!disabled?'chooseOne':''}}" data-index="3">{{option3}}</view>
+      <view class="ans {{myAnswerRight==4?'ans_true':''}} {{myAnswerError==4?'ans_false':''}}" bindtap="{{!disabled?'chooseOne':''}}" data-index="4">{{option4}}</view>
     </view>
   </view>  
 </view>
