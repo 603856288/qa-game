@@ -8,7 +8,7 @@
     "pages/moreChance/moreChance",
     "pages/award/award",
     "pages/ready/ready",
-    "pages/blogaward/blogaward"
+    "pages/blogaward/blogaward"        
   ],
   "window": {
     "backgroundTextStyle": "light",

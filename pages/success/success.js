@@ -25,7 +25,10 @@ Page({
     })
   },
   continue:function(){
-    wx.showLoading();
+    wx.showLoading({
+        mask : true,
+      }
+    );
     var param={
       'openId':wx.getStorageSync('openId')
     }

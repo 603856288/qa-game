@@ -2,7 +2,10 @@ const host = require('../../utils/data.js').host;
 const nIndex = require('../../utils/data.js').nIndex;
 const app_recover_share_icon = require('../../utils/data.js').app_recover_share_icon;
 const app = getApp();
+var lastDateTime = Date.now();
+
 Page({
+
   data: {
     disabled:false,
     avatarUrl:wx.getStorageSync('avatarUrl'),
@@ -152,6 +155,13 @@ Page({
     this.submitChallenge(false);
   },
   chooseOne:function(e){
+
+    var currentDateTime = Date.now();
+    if ((currentDateTime-lastDateTime)<500) {
+      return
+    }
+    lastDateTime = currentDateTime;
+
     var self = this;
     self.setData({
       disabled:true
@@ -301,7 +311,10 @@ Page({
       result:tf,
       detail:JSON.stringify(this.data.chooseArr)
     }
-    wx.showLoading();
+    wx.showLoading({
+        mask : true,
+      }
+    );
     wx.request({
       url: host + '/api/submitChallenge', // 目标服务器 url
       dataType: 'json',
