@@ -54,6 +54,7 @@ Page({
             url: '/pages/ready/ready'
           })
         }else{
+          this.showModelAction()
           this.wetoast.toast({
               title: "今天挑战机会已用完，请明天再来！",
               duration: 2000
@@ -68,6 +69,13 @@ Page({
       }
     });
   },
+
+  onHide: function () {
+    this.setData({
+      isShowModel: false
+    })
+  },
+
   findGzh:function(){
     this.setData({
       dialog_gzhShow:true

@@ -12,8 +12,8 @@
     <view class="p2">再接再厉哦！</view>
     <button class="btn_re bg_426098" bindtap="continue">继续挑战</button>
     <button class="btn_re bg_426098" bindtap="returnIndex">回到首页</button>
-    <button class="btn_re " bindtap="showModelAction">关注公众号</button>
-    <view class="p3">关注公众号即可偷看答案</view>
+    <button class="btn_re " bindtap="showModelAction">领取次数+5</button>
+    <view class="p3">关注公众号即可领取挑战次数</view>
   </view>
   <view class="dialog_gzh"  wx:if="{{dialog_gzhShow}}">
     <view class="mask" bindtap="hideDialog"></view>
